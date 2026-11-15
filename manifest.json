@@ -1,0 +1,16 @@
+
+{
+    "name": "Wayground",
+    "description": "Waydroid Background Manager",
+    "architecture": "all",
+    "title": "Wayground",
+    "hooks": {
+        "wayground": {
+            "apparmor": "apparmor.json",
+            "desktop": "app.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Wayground Project",
+    "framework": "ubuntu-touch-24.04-1.x"
+}
