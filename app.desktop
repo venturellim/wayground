@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Name=Wayground
+Comment=Waydroid Background Manager
+Exec=qmlscene $@ Main.qml
+Icon=assets/wayground.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
