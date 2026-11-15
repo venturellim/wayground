@@ -1,5 +1,6 @@
 
 
+
 name: Build Wayground Click
 
 on:
@@ -16,9 +17,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check Docker
+        run: docker info
+
       - name: Install Clickable
         run: |
-          sudo snap install clickable
+          sudo apt-get update
+          sudo apt-get install -y pipx
+          pipx ensurepath
+          pipx install clickable-ut
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Build ARM64 Click package
         run: |
