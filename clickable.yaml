@@ -1,0 +1,13 @@
+
+clickable_minimum_required: "8.4.0"
+
+builder: pure
+
+framework: ubuntu-touch-24.04-1.x
+
+install_root_data:
+  - manifest.json
+  - app.desktop
+  - apparmor.json
+  - qml
+  - assets
