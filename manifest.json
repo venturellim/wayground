@@ -1,6 +1,7 @@
 
+
 {
-    "name": "Wayground",
+    "name": "com.venturellim.wayground",
     "description": "Waydroid Background Manager",
     "architecture": "all",
     "title": "Wayground",
@@ -12,5 +13,5 @@
     },
     "version": "0.1",
     "maintainer": "Wayground Project",
-    "framework": "ubuntu-touch-24.04-1.x"
+    "framework": "@CLICK_FRAMEWORK@"
 }
