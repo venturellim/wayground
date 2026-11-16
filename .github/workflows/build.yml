@@ -30,7 +30,7 @@ jobs:
 
       - name: Build ARM64 Click package
         run: |
-          clickable build --arch all
+          clickable build --arch all --container-mode
 
       - name: Upload Click package
         uses: actions/upload-artifact@v4
