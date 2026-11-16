@@ -10,4 +10,3 @@ install_root_data:
   - app.desktop
   - apparmor.json
   - qml
-  - assets
