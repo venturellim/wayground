@@ -23,7 +23,7 @@ jobs:
       - name: Install Clickable
         run: |
           sudo apt-get update
-          sudo apt-get install -y pipx
+          sudo apt-get install -y pipx click
           pipx ensurepath
           pipx install clickable-ut
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
