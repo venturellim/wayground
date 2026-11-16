@@ -37,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: wayground-click
-          path: build/**/*.click
+          path: "*.click"
           if-no-files-found: error
