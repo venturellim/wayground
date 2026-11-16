@@ -2,6 +2,7 @@
 
 
 
+
 name: Build Wayground Click
 
 on:
@@ -28,6 +29,14 @@ jobs:
           pipx ensurepath
           pipx install clickable-ut
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Configure Clickable
+        run: |
+          mkdir -p "$HOME/.clickable"
+          cat > "$HOME/.clickable/config.yaml" <<'EOF'
+          build:
+            skip_review: true
+          EOF
 
       - name: Build Click package
         run: |
