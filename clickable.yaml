@@ -1,11 +1,18 @@
 
 
 
+
 clickable_minimum_required: "8.4.0"
 
 builder: pure
 
 framework: ubuntu-touch-24.04-1.x
+
+skip_review: true
+
+ignore:
+  - .github
+  - README.md
 
 install_root_data:
   - manifest.json
