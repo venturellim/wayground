@@ -21,6 +21,7 @@ jobs:
         run: docker info
 
       - name: Install Clickable
+      runs-on: ubuntu-latest
         run: |
           sudo apt-get update
           sudo apt-get install -y pipx click
