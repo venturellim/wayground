@@ -1,35 +1,35 @@
 
 
 
+
 name: Build Wayground Click
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check Docker
-        run: docker info
-
-      - name: Install Clickable
-      runs-on: ubuntu-latest
+      - name: Install tools
         run: |
           sudo apt-get update
           sudo apt-get install -y pipx click
+
+      - name: Install Clickable
+        run: |
           pipx ensurepath
           pipx install clickable-ut
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
-      - name: Build ARM64 Click package
+      - name: Build Click package
         run: |
           clickable build --arch all --container-mode
 
